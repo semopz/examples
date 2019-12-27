@@ -8,8 +8,7 @@ import {
 } from '@microsoft/sp-webpart-base';
 
 import * as strings from 'ToastWebPartStrings';
-import Toast from './components/Toast';
-import { IToastProps } from './components/IToastProps';
+import { ShowToast } from './components/Toast';
 
 export interface IToastWebPartProps {
   description: string;
@@ -18,11 +17,8 @@ export interface IToastWebPartProps {
 export default class ToastWebPart extends BaseClientSideWebPart<IToastWebPartProps> {
 
   public render(): void {
-    const element: React.ReactElement<IToastProps > = React.createElement(
-      Toast,
-      {
-        description: this.properties.description
-      }
+    const element: React.ReactElement<{}> = React.createElement(
+      ShowToast
     );
 
     ReactDom.render(element, this.domElement);
