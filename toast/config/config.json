@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "toast-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/toast/ToastWebPart.js",
+          "manifest": "./src/webparts/toast/ToastWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "ToastWebPartStrings": "lib/webparts/toast/loc/{locale}.js"
+  }
+}
